@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio khurota aini - Tidak Terlalu Serius</title>
+    <!-- Memuat Tailwind CSS dari CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Memuat Font Google: Bangers (Lucu/Heading) dan Patrick Hand (Aesthetic/Body) -->
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Patrick+Hand&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Konfigurasi Warna Kustom dan Font Aesthetic/Lucu */
+        :root {
+            --color-crimson: #990000; /* Merah Tua Utama */
+            --color-accent: #FFD700;  /* Kuning Emas Cerah untuk Aksen Lucu */
+            --color-cream: #FAF8F5;   /* Latar Belakang Lembut */
+            --font-heading: 'Bangers', cursive;
+            --font-body: 'Patrick Hand', cursive;
+        }
+
+        body {
+            font-family: var(--font-body);
+            color: #333;
+            background-color: var(--color-cream);
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-heading);
+            letter-spacing: 0.05em; /* Memberi kesan lebih 'pop' */
+        }
+        
+        /* Utility untuk tombol yang terlihat 'ditekan' */
+        .btn-crimson {
+            background-color: var(--color-crimson);
+            color: white;
+            box-shadow: 0 5px 0 var(--color-crimson);
+            transition: all 0.1s ease;
+        }
+
+        .btn-crimson:active {
+            box-shadow: 0 0 0 var(--color-crimson);
+            transform: translateY(5px);
+        }
+
+        /* Konfigurasi Tailwind untuk warna kustom */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'crimson-dark': 'var(--color-crimson)',
+                        'accent-fun': 'var(--color-accent)',
+                        'bg-cream': 'var(--color-cream)',
+                    },
+                    fontFamily: {
+                        heading: ['Bangers', 'cursive'],
+                        body: ['Patrick Hand', 'cursive'],
+                    },
+                }
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigasi -->
+    <header id="navbar" class="sticky top-0 z-50 bg-bg-cream shadow-md">
+        <nav class="max-w-4xl mx-auto px-4 sm:px-6 py-4 flex justify-between items-center text-lg">
+            <a href="#hero" class="text-3xl font-heading text-crimson-dark leading-none">
+                Khurota Aini
+            </a>
+            <div class="space-x-4 md:space-x-8 text-xl">
+                <a href="#about" class="text-crimson-dark hover:text-accent-fun transition duration-300">Siapa?</a>
+                <a href="#projects" class="text-crimson-dark hover:text-accent-fun transition duration-300">Karya!</a>
+                <a href="#contact" class="text-crimson-dark hover:text-accent-fun transition duration-300">Ngobrol</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="max-w-4xl mx-auto p-4 md:p-8">
+        
+        <!-- Bagian 1: Hero / Beranda -->
+        <section id="hero" class="min-h-[80vh] flex items-center justify-center text-center">
+            <div class="p-6 bg-white/70 backdrop-blur-sm rounded-3xl shadow-xl border-4 border-crimson-dark/50">
+                <h1 class="text-6xl sm:text-8xl font-heading text-crimson-dark mb-4">
+                    HELLO WORLD!
+                </h1>
+                <p class="text-2xl text-gray-700 max-w-xl mx-auto mb-6">
+                    Saya <span class="text-crimson-dark font-bold text-3xl">Khurota Aini</span>, seorang pelajar yang (pura-pura) serius membuat proyek digital.
+                </p>
+                <button onclick="document.getElementById('hidden-fact').classList.toggle('hidden')" class="btn-crimson px-8 py-3 rounded-xl uppercase font-heading text-lg tracking-wider">
+                    Fakta Random!
+                </button>
+                <p id="hidden-fact" class="hidden mt-4 text-crimson-dark italic text-lg animate-bounce">
+                    Psst... Saya bisa coding karena kopi, bukan buku! 🤫
+                </p>
+            </div>
+        </section>
+
+        <!-- Bagian 2: Tentang Saya (About) -->
+        <section id="about" class="py-16">
+            <h2 class="text-5xl font-heading text-crimson-dark text-center mb-10 border-b-4 border-accent-fun pb-2 inline-block mx-auto">
+                Siapa Sih Saya Ini?
+            </h2>
+            <div class="bg-white p-6 sm:p-10 rounded-3xl shadow-xl border-4 border-accent-fun/50">
+                <p class="text-xl text-gray-700 mb-6">
+                    Di siang hari, saya adalah mahasiswa Manajemen perkantoran  yang sibuk mencari WiFi gratis. Di malam hari, saya bertransformasi menjadi <span class="text-crimson-dark font-bold">Pembangun Dunia Digital</span>!
+                </p>
+                <p class="text-xl text-gray-700">
+                    Saya suka membuat website yang tidak hanya berfungsi, tapi juga bisa membuat orang tersenyum. Keahlian utama saya adalah mengubah ide rumit menjadi kode yang "enak dibaca" (kata dosen saya, sih).
+                </p>
+                
+                <div class="mt-8">
+                    <h3 class="text-3xl font-heading text-crimson-dark mb-4">Senjata Rahasia (Skill):</h3>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="bg-crimson-dark text-accent-fun font-heading text-lg px-4 py-1 rounded-full border-2 border-accent-fun shadow-md">HTML/CSS</span>
+                        <span class="bg-crimson-dark text-accent-fun font-heading text-lg px-4 py-1 rounded-full border-2 border-accent-fun shadow-md">JavaScript (Bukan Kopi)</span>
+                        <span class="bg-crimson-dark text-accent-fun font-heading text-lg px-4 py-1 rounded-full border-2 border-accent-fun shadow-md">Tailwind Power!</span>
+                        <span class="bg-crimson-dark text-accent-fun font-heading text-lg px-4 py-1 rounded-full border-2 border-accent-fun shadow-md">Ngopi Malam</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian 3: Proyek (Projects) -->
+        <section id="projects" class="py-16">
+            <h2 class="text-5xl font-heading text-crimson-dark text-center mb-10 border-b-4 border-accent-fun pb-2 inline-block mx-auto">
+                Kotak Mainan Digital
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Kartu Proyek 1 -->
+                <div class="bg-white rounded-3xl p-6 shadow-xl border-4 border-crimson-dark transition duration-300 hover:scale-[1.03] transform">
+                    <h3 class="text-4xl font-heading text-accent-fun bg-crimson-dark inline-block px-2 rounded-lg mb-3">Sistem Pencatat Jajan!</h3>
+                    <p class="text-lg mb-4 text-gray-700">
+                        Aplikasi yang didesain agar saya ingat ke mana hilangnya uang jajan. Fitur utama: grafik pengeluaran yang dramatis.
+                    </p>
+                    <a href="#" class="inline-block btn-crimson px-5 py-2 rounded-xl font-heading text-sm uppercase">
+                        Lihat Proyek &rarr;
+                    </a>
+                </div>
+
+                <!-- Kartu Proyek 2 -->
+                <div class="bg-white rounded-3xl p-6 shadow-xl border-4 border-crimson-dark transition duration-300 hover:scale-[1.03] transform">
+                    <h3 class="text-4xl font-heading text-accent-fun bg-crimson-dark inline-block px-2 rounded-lg mb-3">Website Resep Random</h3>
+                    <p class="text-lg mb-4 text-gray-700">
+                        Membuat situs web yang secara acak menghasilkan resep. 90% resepnya aneh, tapi 10% sisanya lezat.
+                    </p>
+                    <a href="#" class="inline-block btn-crimson px-5 py-2 rounded-xl font-heading text-sm uppercase">
+                        Lihat Proyek &rarr;
+                    </a>
+                </div>
+
+                <!-- Kartu Proyek 3 -->
+                <div class="bg-white rounded-3xl p-6 shadow-xl border-4 border-crimson-dark transition duration-300 hover:scale-[1.03] transform md:col-span-2">
+                    <h3 class="text-4xl font-heading text-accent-fun bg-crimson-dark inline-block px-2 rounded-lg mb-3">Prototipe Game "Mengejar Tugas"</h3>
+                    <p class="text-lg mb-4 text-gray-700">
+                        Desain UI/UX untuk game mobile di mana pemain harus mengejar tenggat waktu yang kabur. Berbasis Figma.
+                    </p>
+                    <a href="#" class="inline-block btn-crimson px-5 py-2 rounded-xl font-heading text-sm uppercase">
+                        Lihat Proyek &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bagian 4: Kontak (Contact) -->
+        <section id="contact" class="py-16">
+            <div class="bg-crimson-dark p-8 sm:p-12 rounded-3xl shadow-2xl text-center border-4 border-accent-fun">
+                <h2 class="text-5xl font-heading text-accent-fun mb-4">
+                    Mau Ajak Ngobrol?
+                </h2>
+                <p class="text-xl text-white/90 mb-8">
+                    Yuk, kita buat proyek seru bareng! Serius, tapi tetap santai.
+                </p>
+
+                <!-- Tombol Kontak -->
+                <div class="space-y-4">
+                    <a href="mailto:emailanda@example.com" class="inline-block w-full sm:w-auto px-10 py-3 bg-accent-fun text-crimson-dark font-heading rounded-xl shadow-lg hover:opacity-90 transition duration-300 text-xl uppercase tracking-wider">
+                        Kirim Email Rahasia
+                    </a>
+                    <p class="text-white/70 text-sm">
+                        (Atau cek media sosial saya di bawah!)
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-crimson-dark/95 text-white/80 py-6 text-center text-sm">
+        <div class="max-w-6xl mx-auto px-4">
+            <p>&copy; <span id="current-year"></span> . Disclaimer: Saya hanya pura-pura serius. 😎</p>
+            <div class="flex justify-center space-x-4 mt-2 text-lg">
+                <a href="#" class="hover:text-accent-fun transition duration-300">🔗 LinkedIn</a>
+                <a href="#" class="hover:text-accent-fun transition duration-300">🐙 GitHub</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script JavaScript Sederhana -->
+    <script>
+        // Set tahun saat ini di footer
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
+
